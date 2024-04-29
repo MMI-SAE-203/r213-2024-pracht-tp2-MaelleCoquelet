@@ -1,21 +1,7 @@
 <script setup lang="ts">
-interface MaisonRecord {
-  adresse: string;
-  collectionId: string;
-  collectionName: string;
-  created: string;
-  favori: boolean;
-  id: string;
-  image: string;
-  nbChambres: number;
-  nbSdb: number;
-  nomMaison: string;
-  prix: number;
-  surface: number;
-  updated: string;
-}
+import type { MaisonRecord } from '@/types'
 
-const maisonsListe:MaisonRecord[] = [
+const maisonsListe: MaisonRecord[] = [
   {
     "adresse": "2821 Lake Sevilla, Palm Harbor, TX",
     "collectionId": "sidpkt9hmbfwoeb",
