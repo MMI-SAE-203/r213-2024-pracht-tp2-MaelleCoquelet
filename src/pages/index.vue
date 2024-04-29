@@ -53,5 +53,6 @@ const maisonsListe: MaisonRecord[] = [
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
-  <MaisonCard></MaisonCard>
+  <MaisonCard v-bind="maisonsListe[0]"></MaisonCard>
+  <MaisonCard v-bind="maisonsListe[1]"></MaisonCard>
 </template>
