@@ -1,5 +1,7 @@
-<script>
+<script setup lang="ts">
+import type { MaisonRecord } from '@/types'
 
+defineProps<MaisonRecord>()
 </script>
 <template>
     <h1>Exemple Maison</h1>
@@ -18,17 +20,17 @@
                 <div class="flex-grow-0 flex-shrink-0 w-[249px] h-[75px]">
                     <div class="flex justify-start items-end w-[164.11px] absolute left-0 top-0 gap-0.5">
                         <p class="flex-grow-0 flex-shrink-0 text-2xl font-bold text-left text-indigo-500">
-                            $4,650
+                            {{ prix }} $
                         </p>
                         <p class="flex-grow-0 flex-shrink-0 w-[58px] h-8 text-base text-left text-gray-500">
                             /month
                         </p>
                     </div>
                     <p class="w-[249px] absolute left-0 top-[43px] text-2xl font-semibold text-left text-gray-900">
-                        St. Christal
+                        {{ nomMaison }}
                     </p>
                 </div>
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                <svg width="48" height="48" viewBox="0 0 48 48" :fill="favori ? 'red' :'none'" xmlns="http://www.w3.org/2000/svg"
                     class="flex-grow-0 flex-shrink-0 w-12 h-12" preserveAspectRatio="xMidYMid meet">
                     <circle cx="24" cy="24" r="23.25" fill="white" stroke="#E0E7FF" stroke-width="1.5"></circle>
                     <path
@@ -37,7 +39,7 @@
                 </svg>
             </div>
             <p class="self-stretch flex-grow-0 flex-shrink-0 w-[303px] text-base text-left text-gray-500">
-                210 US Highway, HighlandLake, FL
+                {{ adresse }}
             </p>
             <svg width="303" height="2" viewBox="0 0 303 2" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="self-stretch flex-grow-0 flex-shrink-0" preserveAspectRatio="xMidYMid meet">
@@ -60,7 +62,7 @@
                             stroke="#6366F1" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round">
                         </path>
                     </svg>
-                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">4 Beds</p>
+                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{ nbChambres }} Beds</p>
                 </div>
                 <div class="flex justify-center items-center flex-grow relative gap-2">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +87,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">2 Bathrooms</p>
+                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600"> {{ nbSdb }} Bathrooms</p>
                 </div>
                 <div class="flex justify-end items-center flex-grow relative gap-2">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +108,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">6x7.5 m²</p>
+                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{ surface }} m²</p>
                 </div>
             </div>
         </div>
