@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import type { MaisonRecord } from '@/types'
+import { Collections, type MaisonsListeResponse } from '@/pocketbase-types';
 
-defineProps<MaisonRecord>()
+import ImgPb from './ImgPb.vue'
+
+const props = defineProps<MaisonsListeResponse>()
 </script>
 <template>
     <h1>Exemple Maison</h1>
@@ -11,8 +13,8 @@ defineProps<MaisonRecord>()
             <div
                 class="w-[343px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500">
             </div>
-            <img src="#"
-                class="w-[343px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
+            <ImgPb :record="props" :filename="images" :width="387" :height="235"
+                class="w-[343px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover rounded-lg" />
         </div>
         <div
             class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-5 py-[30px]">
@@ -30,8 +32,9 @@ defineProps<MaisonRecord>()
                         {{ nomMaison }}
                     </p>
                 </div>
-                <svg width="48" height="48" viewBox="0 0 48 48" :fill="favori ? 'red' :'none'" xmlns="http://www.w3.org/2000/svg"
-                    class="flex-grow-0 flex-shrink-0 w-12 h-12" preserveAspectRatio="xMidYMid meet">
+                <svg width="48" height="48" viewBox="0 0 48 48" :fill="favori ? 'red' : 'none'"
+                    xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-12 h-12"
+                    preserveAspectRatio="xMidYMid meet">
                     <circle cx="24" cy="24" r="23.25" fill="white" stroke="#E0E7FF" stroke-width="1.5"></circle>
                     <path
                         d="M16.318 18.318C15.9002 18.7359 15.5687 19.232 15.3425 19.778C15.1164 20.3239 15 20.9091 15 21.5C15 22.091 15.1164 22.6762 15.3425 23.2221C15.5687 23.7681 15.9002 24.2642 16.318 24.682L24 32.364L31.682 24.682C32.526 23.8381 33.0001 22.6935 33.0001 21.5C33.0001 20.3066 32.526 19.162 31.682 18.318C30.8381 17.4741 29.6935 17 28.5 17C27.3066 17 26.162 17.4741 25.318 18.318L24 19.636L22.682 18.318C22.2642 17.9002 21.7681 17.5687 21.2221 17.3425C20.6762 17.1164 20.091 17 19.5 17C18.9091 17 18.3239 17.1164 17.778 17.3425C17.232 17.5687 16.7359 17.9002 16.318 18.318V18.318Z"

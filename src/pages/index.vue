@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import type { MaisonRecord } from '@/types'
 import MaisonCard from '@/components/MaisonCard.vue';
+import { Collections, type MaisonsListeResponse } from '@/pocketbase-types';
 
-const maisonsListe: MaisonRecord[] = [
+const maisonsListe: MaisonsListeResponse[] = [
   {
     "adresse": "8 Rue du Faux Général, 97000 Paris",
     "collectionId": "esec94w3q54x0n5",
-    "collectionName": "maisonsListe",
+    "collectionName": Collections.MaisonsListe,
     "created": "2024-04-12 08:41:48.112Z",
     "favori": false,
     "id": "4teqz6rvmpyv9ft",
-    "images": [
-      "frames_for_your_heart_m_r1_ciddu_glc_unsplash_gpP2NiF7RZ.jpg",
-      "vu_anh_ti_vptycg_3_e_unsplash_UxiXDmpHCX.jpg"
-    ],
+    "images": "vu_anh_ti_vptycg_3_e_unsplash_UxiXDmpHCX.jpg",
     "nbChambres": 3,
     "nbSdB": 2,
     "nomMaison": "Tome Raider",
@@ -24,15 +21,11 @@ const maisonsListe: MaisonRecord[] = [
   {
     "adresse": "15 Rue du Sashimi, 25000 Besançon",
     "collectionId": "esec94w3q54x0n5",
-    "collectionName": "maisonsListe",
+    "collectionName": Collections.MaisonsListe,
     "created": "2024-04-12 08:44:29.787Z",
     "favori": true,
     "id": "n5bd7m1m3x88ud1",
-    "images": [
-      "dillon_kydd_xgvwt544g8k_unsplash_3kmh4xk1xk.jpg",
-      "jason_briscoe_aql_j19oc_we_unsplash_mZS0qp4VsJ.jpg",
-      "john_fornander_y3_ahhrx_uby_unsplash_1_j5jTreA0sr.jpg"
-    ],
+    "images": "john_fornander_y3_ahhrx_uby_unsplash_1_j5jTreA0sr.jpg",
     "nbChambres": 5,
     "nbSdB": 3,
     "nomMaison": "Plotbound",
@@ -43,14 +36,11 @@ const maisonsListe: MaisonRecord[] = [
   {
     "adresse": "80 Rue des Feuilletés Pas Cuits, 25200 Montbéliard",
     "collectionId": "esec94w3q54x0n5",
-    "collectionName": "maisonsListe",
+    "collectionName": Collections.MaisonsListe,
     "created": "2024-04-12 08:47:07.383Z",
     "favori": false,
     "id": "9dcp0fagqws1wpy",
-    "images": [
-      "ann_wallace_biep_nx5n7r4_unsplash_3UbPbNmivK.jpg",
-      "greg_rivers_r_ch_fumw_ae7_e_unsplash_QQqtl8sUYv.jpg"
-    ],
+    "images": "greg_rivers_r_ch_fumw_ae7_e_unsplash_QQqtl8sUYv.jpg",
     "nbChambres": 1,
     "nbSdB": 1,
     "nomMaison": "LeToitientpas",
@@ -61,14 +51,11 @@ const maisonsListe: MaisonRecord[] = [
   {
     "adresse": "2 Avenue des Hamburgers, 76000 Rouen",
     "collectionId": "esec94w3q54x0n5",
-    "collectionName": "maisonsListe",
+    "collectionName": Collections.MaisonsListe,
     "created": "2024-04-12 08:49:14.004Z",
     "favori": true,
     "id": "vho441nosbv6dtp",
-    "images": [
-      "jason_briscoe_aql_j19oc_we_unsplash_1rb7yXiemB.jpg",
-      "kara_eads_l7_ew_hkq1_b2s_unsplash_MygPsXJs0n.jpg"
-    ],
+    "images": "kara_eads_l7_ew_hkq1_b2s_unsplash_MygPsXJs0n.jpg",
     "nbChambres": 8,
     "nbSdB": 5,
     "nomMaison": "Villa de Verninac",
@@ -79,13 +66,11 @@ const maisonsListe: MaisonRecord[] = [
   {
     "adresse": "25 Boulevard des Champignons, 69123 Lyon",
     "collectionId": "esec94w3q54x0n5",
-    "collectionName": "maisonsListe",
+    "collectionName": Collections.MaisonsListe,
     "created": "2024-04-12 08:51:48.884Z",
     "favori": true,
     "id": "39e7pkznsasite4",
-    "images": [
-      "dillon_kydd_xgvwt544g8k_unsplash_UvB71fv73L.jpg"
-    ],
+    "images": "dillon_kydd_xgvwt544g8k_unsplash_UvB71fv73L.jpg",
     "nbChambres": 4,
     "nbSdB": 1,
     "nomMaison": "Tour de Cusance",
