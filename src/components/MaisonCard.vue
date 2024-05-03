@@ -11,7 +11,7 @@ const props = defineProps<MaisonsListeResponse>()
         class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative rounded-lg bg-white border-[1.5px] border-indigo-100">
         <div class="self-stretch flex-grow-0 flex-shrink-0 h-[200px]">
             <div
-                class="w-[343px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500">
+                class="w-[343px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg">
             </div>
             <ImgPb :record="props" :filename="images" :width="387" :height="235"
                 class="w-[343px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover rounded-lg" />
@@ -90,7 +90,7 @@ const props = defineProps<MaisonsListeResponse>()
                             </clipPath>
                         </defs>
                     </svg>
-                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600"> {{ nbSdb }} Bathrooms</p>
+                    <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600"> {{ nbSdB }} Bathrooms</p>
                 </div>
                 <div class="flex justify-end items-center flex-grow relative gap-2">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
