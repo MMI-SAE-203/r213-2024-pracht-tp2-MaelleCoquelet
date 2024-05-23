@@ -19,15 +19,16 @@ try {
 /* console.log("QUESTION 6")
 6. écrire le code permettant d’afficher une maison dont on connaît l'id
  */
-export async function uneMaison(id: string) {
+export async function oneID(id: string) {
     try {
-        const uneMaison = await pb.collection('maisonsListe').getOne(id);
+        const oneID = await pb.collection('maisonsListe').getOne(id);
         // console.log(JSON.stringify(uneMaison, null, 2));
-        return uneMaison;
+        return oneID;
     } catch (e) {
         console.error(e);
     }
 }
+
 
 /* console.log("QUESTION 7")
 7. écrire le code permettant d’afficher toutes les maisons par ordre croissant de leur date de création */
