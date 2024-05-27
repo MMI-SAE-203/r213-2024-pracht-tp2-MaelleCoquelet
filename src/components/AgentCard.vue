@@ -3,14 +3,14 @@ import { Collections, type AgentsResponse } from '@/pocketbase-types';
 const props = defineProps<AgentsResponse>()
 </script>
 <template>
-    <article>
-        <div>
-            <h3>PRENOM AGENT</h3>
-            <p>NOM AGENT</p>
+    <article class="border border-teal-500 rounded-lg w-fit p-4 m-2">
+        <div class="flex gap-1">
+            <h3>{{ prenom }}</h3>
+            <p>{{ nom }}</p>
         </div>
         <div>
-            <p>TELEPHONE AGENT</p>
-            <p>EMAIL AGENT</p>
+            <p>{{ telephone }}</p>
+            <p>{{ email }}</p>
         </div>
     </article>
 </template>

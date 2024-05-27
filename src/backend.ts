@@ -6,14 +6,19 @@ export const pb = new PocketBase(import.meta.env.VITE_URL_POCKETBASE) as TypedPo
 // Copier ici les fonctions developpées en R214 | Système d'information
 
 
+export async function allAgentsSorted() {
+    const allAgents = await pb.collection('agents').getFullList({ sort: 'nom' });
+    return allAgents;
+}
+
 /* 5. Récupérer la liste de toutes les données à partir de la collection */
 
-try {
+/* try {
     const listeAll = await pb.collection('maisonsListe').getFullList();
     console.table(listeAll);
 } catch (e) {
     console.error(e);
-}
+} */
 
 
 /* console.log("QUESTION 6")
